@@ -1,0 +1,32 @@
+---
+---
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/src/styles/globals.css" />
+    <title>PadelCore</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="w-full py-4 px-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center neon font-bold">PC</div>
+        <span class="text-lg font-semibold">PadelCore</span>
+      </div>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/" class="hover:neon">Home</a>
+        <a href="/sedes" class="hover:neon">Sedes</a>
+        <a href="/contacto" class="hover:neon">Contacto</a>
+        <a class="btn-cta ml-4" href="/sedes">Reserva tu cancha</a>
+      </nav>
+      <button class="md:hidden p-2 rounded-md card-glass">☰</button>
+    </header>
+    <main class="flex-1 px-4 md:px-12 lg:px-24">
+      <slot />
+    </main>
+    <footer class="py-8 text-center text-sm text-gray-400">
+      © 2026 PadelCore — Tecnología y comunidad.
+    </footer>
+    <script type="module" src="/src/components/reveal.js"></script>
+  </body>
+</html>

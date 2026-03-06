@@ -1,0 +1,16 @@
+---
+import Layout from '../components/Layout.astro'
+import VenueCard from '../components/VenueCard.astro'
+---
+<Layout>
+  <div class="mt-8 flex gap-4 items-center">
+    <input placeholder="Filtrar por zona (ej. Melbourne)" class="rounded-md bg-transparent border border-white/6 p-3 w-full" />
+    <button class="btn-cta">Buscar</button>
+  </div>
+
+  <section class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <VenueCard image="/assets/venue1.jpg" name="PadelCore Melbourne Central" amenities={['Duchas','Parking','Bar']} mapThumb="/assets/map1.jpg" delay="100" />
+    <VenueCard image="/assets/venue2.jpg" name="PadelCore Southbank" amenities={['Duchas','Bar']} mapThumb="/assets/map2.jpg" delay="200" />
+    <VenueCard image="/assets/venue3.jpg" name="PadelCore Brighton" amenities={['Duchas','Parking']} mapThumb="/assets/map3.jpg" delay="300" />
+  </section>
+</Layout>

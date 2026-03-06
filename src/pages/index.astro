@@ -1,16 +1,23 @@
 ---
+import Layout from '../components/Layout.astro'
+import Hero from '../components/Hero.astro'
+import FeatureCard from '../components/FeatureCard.astro'
 ---
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="/src/styles/globals.css" />
-    <title>PadelCore</title>
-  </head>
-  <body>
-    <main class="p-6">
-      <h1 class="text-3xl font-bold">PadelCore</h1>
-      <p class="mt-4">Plantilla inicial — Astro + Tailwind</p>
-    </main>
-  </body>
-</html>
+<Layout>
+  <Hero />
+  <section id="features" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <FeatureCard icon="⏱" title="Reserva en tiempo real" text="Busca horarios, compara y reserva instantáneamente." delay="100" />
+    <FeatureCard icon="🎯" title="Canchas con sensores" text="Seguimiento de golpes y rendimiento por sesión." delay="220" />
+    <FeatureCard icon="🤝" title="Comunidad exclusiva" text="Torneos, ligas y eventos para miembros." delay="340" />
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-semibold neon reveal" data-delay="100">Beneficios</h2>
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card-glass p-4 text-center reveal" data-delay="160"><div class="text-2xl neon">🏆</div><p class="mt-2 text-sm">Ranking en tiempo real</p></div>
+      <div class="card-glass p-4 text-center reveal" data-delay="200"><div class="text-2xl neon">⚡</div><p class="mt-2 text-sm">Check-in rápido</p></div>
+      <div class="card-glass p-4 text-center reveal" data-delay="240"><div class="text-2xl neon">📊</div><p class="mt-2 text-sm">Estadísticas por juego</p></div>
+      <div class="card-glass p-4 text-center reveal" data-delay="280"><div class="text-2xl neon">🍹</div><p class="mt-2 text-sm">Bar & lounge</p></div>
+    </div>
+  </section>
+</Layout>

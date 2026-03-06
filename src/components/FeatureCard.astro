@@ -1,0 +1,10 @@
+---
+const {icon, title, text, delay} = Astro.props;
+---
+<div class="card-glass p-5 flex gap-4 items-start reveal" data-delay={delay || 0}>
+  <div class="w-12 h-12 rounded-md bg-[rgba(0,0,0,0.4)] flex items-center justify-center neon">{icon}</div>
+  <div>
+    <h3 class="font-semibold">{title}</h3>
+    <p class="text-sm text-gray-300 mt-1">{text}</p>
+  </div>
+</div>

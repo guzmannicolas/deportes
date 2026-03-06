@@ -1,0 +1,19 @@
+---
+import Layout from '../components/Layout.astro'
+import ContactForm from '../components/ContactForm.astro'
+import MapPlaceholder from '../components/MapPlaceholder.astro'
+import FAQ from '../components/FAQ.astro'
+---
+<Layout>
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ContactForm />
+    <div class="space-y-6">
+      <MapPlaceholder />
+      <FAQ />
+      <div class="card-glass p-4">
+        <h4 class="font-semibold neon">Contacto directo</h4>
+        <p class="text-sm text-gray-300 mt-2">support@padelcore.example • +61 400 000 000</p>
+      </div>
+    </div>
+  </div>
+</Layout>
