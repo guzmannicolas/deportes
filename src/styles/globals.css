@@ -2,16 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root{
-  --bg: #0b0c0f;
-  --neon: #00ff7a;
-}
-body{ @apply bg-[color:var(--bg)] text-gray-200 font-sans; }
-.card-glass{ background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px); box-shadow: 0 8px 30px rgba(2,6,23,0.6); border-radius: 12px; }
-.btn-cta{ @apply inline-flex items-center gap-3 px-5 py-3 rounded-full text-black; background: var(--neon); }
-.reveal{ opacity:0; transform: translateY(18px) scale(0.995); transition: opacity .6s, transform .6s; }
-.reveal.is-visible{ opacity:1; transform: translateY(0) scale(1); }
